@@ -65,6 +65,11 @@ export class TodoFormComponent implements OnChanges {
       title: ['', Validators.required]
     }));
   }
+  deleteStep(id:number){
+    this.stepsArray.forEach(element => {
+      if(element.id===id)this.stepsArray.pop();
+    });
+  }
 
   confirmChanges() {
     this.formSubmitEvent.emit(this.todoForm.value);
