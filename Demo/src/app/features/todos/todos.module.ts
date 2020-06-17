@@ -6,7 +6,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
 import { TodoEditComponent } from './components/todo-edit/todo-edit.component';
 import { TodosFacadeService } from './services/todos-facade.service';
-import { TodoAddComponent } from './componets/todo-add/todo-add.component';
+import { TodoAddComponent } from './components/todo-add/todo-add.component';
+
 
 
 @NgModule({

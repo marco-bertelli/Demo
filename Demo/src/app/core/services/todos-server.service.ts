@@ -20,4 +20,7 @@ export class TodosServerService {
   updateTodo(todo: Todo): Observable<Todo[]>{
     return this.httpCommunications.retrievePutCall("todos/"+todo.id, todo);
   }
+  addTodo(todo:Todo){
+    return this.httpCommunications.retrievePostCall("todos",todo);
+  }
 }

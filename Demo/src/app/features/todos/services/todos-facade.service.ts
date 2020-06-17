@@ -36,12 +36,23 @@ export class TodosFacadeService {
     });
   }
 
+  addTodo(todo:Todo){
+    this.todosServerService.addTodo(todo).subscribe(() => {
+      this.getAllTodos();
+      this.goToAll();
+    });
+  }
+  
+
   goToDetail(id: number) {
     this.router.navigateByUrl('/todos/detail/' + id);
   }
   
   goToEdit(id: number) {
     this.router.navigateByUrl('/todos/edit/' + id);
+  }
+  goToAll(){
+    this.router.navigateByUrl('/todos');
   }
 
 }
